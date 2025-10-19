@@ -71,36 +71,7 @@ a{
     font-size: 30px;
 }
 
-/*lko*/
-.para{
-    font-size: 18px;
-    color: black;
-    line-height: 30px;
-}
-.mainhead{
-    line-height: 60px;
-}
-.place{
-    line-height: 50px;
-}
-.month{
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 35px;
-}
-.list{
-    line-height: 28px;
-}
-#lko{
-    text-align: center;
-}
-#taglinelko{
-    font-size: 25px;
-    font-weight: 50;
-}
-#lucknow{
-    background-color: #f2f2f2;
-}
+
 
 /*login page*/
 #login{
@@ -261,4 +232,165 @@ input::placeholder{
     border-radius: 40px;
     cursor: pointer;
     font-weight: 600;
+}
+
+/*lko*/
+#lko{
+    background-image: url(lko-intro-img.jpg);
+    height: 500px;
+    width:1350px;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+#lkoname{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding-top: 220px;
+    padding-left: 250px;
+    text-align: center;
+    font-size: 80px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#lkointro{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 30px;
+    padding-bottom: 20px;
+    margin-top: -220px;
+    margin-left: 750px;
+    border: 2px solid black;
+    color:black;
+    border-radius: 10px;
+    box-shadow: 0 0 6px black;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    line-height: 40px;
+    font-size:18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#taglinelko{
+    font-size: 25px;
+    font-weight: 50;
+}
+#lkohistory{
+    background-color: black;
+    height: 620px;
+    width:1350px;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+#histhead{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    width: auto;
+    float: right;
+    padding:10px;
+    padding-bottom: 20px;
+    padding-top:20px;
+    padding-left:60px;
+    padding-right: 80px;
+    margin-top: 5px;
+    margin-left: auto;
+    text-align: right;
+    font-size: 40px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#histlist{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 20px;
+    margin-top: -1%;
+    margin-left: 670px;
+    color:white;
+    text-align: justify;
+    line-height: 33px;
+    font-size:15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#lkohist-img{
+    width:635px;
+    height: 620px;
+    object-fit: cover;
+    float: left;
+    margin-right: 5px;
+}
+#culturelko{
+    background-color: black;
+    height: 390px;
+    width:1350px;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+#culturehead{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    width: auto;
+    float: left;
+    padding:10px;
+    padding-bottom: 20px;
+    padding-top:20px;
+    padding-left:60px;
+    padding-right: 80px;
+    margin-top: 5px;
+    margin-left: auto;
+    text-align: right;
+    font-size: 40px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#culturelist{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 20px;
+    margin-top: -1%;
+    margin-left: 40px;
+    float:left;
+    color:white;
+    text-align: justify;
+    line-height: 33px;
+    font-size:15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#cultureimglko{
+    width:635px;
+    height: 390px;
+    object-fit: cover;
+    float: right;
+    margin-left: 5px;
+}
+
+.para{
+    font-size: 18px;
+    color: black;
+    line-height: 30px;
+}
+.place{
+    line-height: 50px;
+}
+.month{
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 35px;
+}
+
+
+#lucknow{
+    background-color: #f2f2f2;
 }
