@@ -238,172 +238,250 @@ input::placeholder{
 /*lko*/
 #lko{
     background-image: url(lko-intro-img.jpg);
-    height: 500px;
-    width:1350px;
+    height: 100vh;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 #lkoname{
     display: flex;
     flex-direction: column;
-    width: 300px;
-    padding-top: 220px;
-    padding-left: 250px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 800px;
+    height:auto;
+    padding-top: 0;
+    padding-left: 0;
+    margin: auto;
     text-align: center;
-    font-size: 80px;
-    color:white;
+    align-self: center;
+    font-size: 9vw;
+    color:beige;
     font-family: Arial, Helvetica, sans-serif;
 }
 #lkointro{
     display: flex;
     flex-direction: column;
-    width: 400px;
-    padding: 30px;
-    padding-bottom: 20px;
-    margin-top: -220px;
-    margin-left: 750px;
-    border: 2px solid black;
-    color:black;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+    margin-left: 0;
+    border: 2px solid white;
+    color:white;
     border-radius: 10px;
-    box-shadow: 0 0 6px black;
+    box-shadow: 0 0 6px white;
     background-color: transparent;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     text-align: center;
-    line-height: 40px;
-    font-size:18px;
+    line-height: 1.5;
+    font-size:1rem;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #taglinelko{
-    font-size: 25px;
-    font-weight: 50;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:whitesmoke;
 }
 #lkohistory{
     background-color: black;
-    height: 620px;
-    width:1350px;
-    background-size: cover;
-    background-position: center;
+    height: auto;
+    width:100%;
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding:1rem;
+    display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+}
+#hist-sect-content-lko{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    padding: 1rem;
+    align-items: flex-start;
 }
 #histhead{
-    display: flex;
-    flex-direction: column;
-    position:relative;
-    width: auto;
-    float: right;
-    padding:10px;
-    padding-bottom: 20px;
-    padding-top:20px;
-    padding-left:60px;
-    padding-right: 80px;
-    margin-top: 5px;
-    margin-left: auto;
-    text-align: right;
-    font-size: 40px;
+    display: block;
+    width: 100%;
+    padding:1rem;
+    margin:0;
+    margin-bottom:1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
     color:white;
     font-family: Arial, Helvetica, sans-serif;
 }
 #histlist{
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    padding: 20px;
-    margin-top: -1%;
-    margin-left: 670px;
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    padding-left: 0;
+    margin:0;
+    margin-top: 1%;
     color:white;
     text-align: justify;
-    line-height: 33px;
-    font-size:15px;
+    line-height: 1.9rem;
+    font-size:1.2rem;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #lkohist-img{
-    width:635px;
-    height: 620px;
+    width:100%;
+    height:auto;
     object-fit: cover;
-    float: left;
-    margin-right: 5px;
+    float: none;
+    margin-bottom: 1.5rem;
 }
 #culturelko{
     background-color: black;
-    height: 390px;
-    width:1350px;
+    width:100%;
+    max-width:1400px;
+    height:auto;
     background-size: cover;
     background-position: center;
+    display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 1px;
+    margin: 3rem auto;
+    padding: 1rem;
 }
-#culturehead{
+#cult-section-content{
     display: flex;
     flex-direction: column;
-    position:relative;
-    width: auto;
+    width: 100%;
+    padding: 1rem;
+    align-items: flex-start;
+}
+#culturehead{
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    margin:0;
     float: left;
-    padding:10px;
-    padding-bottom: 20px;
-    padding-top:20px;
-    padding-left:60px;
-    padding-right: 80px;
+    padding:1rem;
     margin-top: 5px;
     margin-left: auto;
-    text-align: right;
-    font-size: 40px;
+    text-align: left;
+    font-size: 1.5rem;
     color:white;
     font-family: Arial, Helvetica, sans-serif;
 }
 #culturelist{
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    padding: 20px;
-    margin-top: -1%;
-    margin-left: 40px;
-    float:left;
+    display: block;
+    width:100%;
+    padding: 1.5rem;
+    padding-left: 0;
+    margin: 0;
+    margin-top: 1rem;
     color:white;
     text-align: justify;
-    line-height: 33px;
-    font-size:15px;
+    line-height: 1.9rem;
+    font-size:1.2rem;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #cultureimglko{
-    width:635px;
-    height: 390px;
+    width:100%;
+    height: auto;
     object-fit: cover;
-    float: right;
-    margin-left: 5px;
+    float: none;
+    margin-top:1.5rem;
+}
+@media screen and (min-width:768px) {
+    #hist-sect-content-lko{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #lkohist-img{
+        width:40%;
+        margin-right: 3rem;
+        margin-bottom: 0;
+    }
+    #hist-text-column{
+        width:60%;
+    }
+    #histhead{
+        text-align:right;
+        font-size:2.5rem;
+    }
+    #histlist{
+        padding-right: 0;
+    }
+    #cult-section-content{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #culture-text-column{
+        width:60%;
+        margin-right: 3rem;
+    }
+    #culturehead{
+        text-align:left;
+        font-size: 2.5rem;
+    }
+    #cultureimglko{
+        width:40%;
+        margin-left:0;
+        margin-top:0;
+    }
+}
+.spot{
+    display:flex;
+    flex-wrap:wrap;
+    background-color: rgba(135, 207, 235, 0.644);
+    margin-top: 5px;
+    justify-content: center;
+    text-align:center;
+}
+.spot h2{
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif ;
+    margin-top: 10px;
+}
+.spot p{
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
 }
 .spotcontainer{
     display:flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 .spotcard{
-    width:325px;
+    width:400px;
     background-color: black;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0,0,0,0,0.2);
-    margin:20px;
+    margin:40px;
 }
 .spotcard img{
     width:100%;
     height: auto;
 }
 .spotcontent{
-    padding: 16px;
+    padding: 18px;
 }
 .spotcontent h3{
     font-size: 28px;
     margin-bottom: 8px;
+    color:white;
+    text-align: center;
 }
 .spotcontent p{
     color:white;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.3;
 }
 
