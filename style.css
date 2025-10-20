@@ -7,8 +7,8 @@
  /*front page*/
  #front{
     background-image: url(front-img.jpg) ;
-    height: 600px;
-    width:1350px;
+    height: 100vh;
+    width:100%;
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -26,11 +26,13 @@
 #extra{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size:40px;
+    text-align: center;
 }
-#footer{
+footer{
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: rgb(174, 165, 185);
+    text-align: center;
 }
 a{
     text-decoration:none;
@@ -38,10 +40,10 @@ a{
 .main{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    max-width: 400px;
+    width: 50%;
     padding: 40px;
-    margin-top: 140px;
-    margin-left: 50px;
+    margin: 150px 0 20px 50px;
     border: 2px solid white;
     border-radius: 8px;
     background-color: transparent;
@@ -61,16 +63,91 @@ a{
 #navbar{
     background-color: rgb(85, 90, 102);
     height:50px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.navlinks{
+    display:flex;
+    align-items: center;
+    gap:70px;
 }
 #white{
     color:white;
-    margin-right: 150px;
+    font-size: 16px;
+    text-decoration: none;
+    white-space: nowrap;
 }
 #yellow{
     color:yellow;
-    margin-right: 200px;
+    text-decoration: none;
+    white-space: nowrap;
     font-size: 30px;
 }
+#navbar a{
+    text-decoration: none;
+}
+@media (max-width:768px){
+    #header{
+        padding-top: 20px;
+        font-size: 24px;
+    }
+    #front{
+        height:100vh;
+    }
+    #extra{
+        font-size: 28px;
+    }
+    .main{
+        margin-top:50px auto 20px auto;
+        max-width:90%;
+        padding:20px;
+    }
+    .main p, .main #intro{
+        font-size:16px;
+        line-height:25px;
+    }
+    #navbar{
+        height:auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding:10px 10px;
+    }
+    .navlinks{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:0;
+        margin-top: 10px;
+    }
+    .navlinks a{
+        padding:5px 0;
+    }
+    
+    #yellow{
+        font-size:24px;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width:480px){
+    #header{
+        font-size:20px;
+        padding-top:15px;
+    }
+    #extra{
+        font-size:22px;
+    }
+    #front{
+        height:100vh;
+    }
+    .main{
+        margin: 140px auto 20px auto;
+        padding:15px;
+    }
+}
+
 
 
 
