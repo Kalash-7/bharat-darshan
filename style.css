@@ -1,6 +1,7 @@
  *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
  }
 
  /*front page*/
@@ -375,6 +376,37 @@ input::placeholder{
     float: right;
     margin-left: 5px;
 }
+.spotcontainer{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.spotcard{
+    width:325px;
+    background-color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0,0.2);
+    margin:20px;
+}
+.spotcard img{
+    width:100%;
+    height: auto;
+}
+.spotcontent{
+    padding: 16px;
+}
+.spotcontent h3{
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.spotcontent p{
+    color:white;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
 
 .para{
     font-size: 18px;
