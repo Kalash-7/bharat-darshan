@@ -240,7 +240,7 @@ a{
     background-color: #ffe6a7;
     color:#150201;
     width: 90%;
-    height:50px;
+    height:40px;
     outline:none;
     border-radius: 50px;
     cursor: pointer;
@@ -254,7 +254,7 @@ a{
     line-height: 40px;
     font-family: Verdana;
     text-align: center;
-    font-size: 26px;
+    font-size: 23px;
 }
 
 
