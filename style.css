@@ -1,815 +1,582 @@
- *{
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
- }
-
- /*front page*/
- #front{
-    background-image: url(front-img.jpg) ;
-    height: 100vh;
-    width:100%;
-    background-size: cover;
-    background-position: center;
-    align-items: center;
-    justify-content: center;
- }
- #header{
-    padding-top: 40px;
-    color:rgb(83, 78, 78);
-    font-family:Arial;
-    text-transform:uppercase;
-    height:50px;
-    text-align:center;
-    font-size: 30px;
- }
-#extra{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size:40px;
-    text-align: center;
-}
-footer{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: rgb(174, 165, 185);
-    text-align: center;
-}
-a{
-    text-decoration:none;
- }
-.main{
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    width: 50%;
-    padding: 40px;
-    margin: 150px 0 20px 50px;
-    border: 2px solid white;
-    border-radius: 8px;
-    background-color: transparent;
-    backdrop-filter: blur(30px);
-    text-align: center;
-    line-height: 30px;
-    font-size:18px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.main #intro{
-    font-size: 20px;
-    font-family: cursive;
-    line-height: 35px;
-}
-
-/*navbar*/
-#navbar{
-    background-color: rgb(85, 90, 102);
-    height:50px;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-}
-.navlinks{
-    display:flex;
-    align-items: center;
-    gap:70px;
-}
-#white{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:white;
-    font-size: 16px;
-    text-decoration: none;
-    white-space: nowrap;
 }
-#yellow{
-    color:yellow;
-    text-decoration: none;
-    white-space: nowrap;
+
+body{
+    background-color: black;
+}
+
+/* navbar */
+#navbar{
+    height: 60px;
+    background-color:  rgb(7, 4, 4);
+}
+#logo{
+    color: yellow;
     font-size: 30px;
+    margin-right: 200px;
 }
-#navbar a{
+#dot{
     text-decoration: none;
+    color: white;
+    margin-right: 200px
 }
-@media (max-width:768px){
-    #header{
-        padding-top: 20px;
-        font-size: 24px;
+/* main heading  */
+#mainheading{
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 90px;
+    text-transform: uppercase;
+}
+/* image slider */
+.container{
+    box-shadow: 0px 0px 10px rgb(15, 14, 14);
+    padding: 2vh;
+    background-color: rgb(7, 4, 4);
+}
+.slider-wrapper{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+.slider{
+    display: flex;
+    aspect-ratio:16/9;
+    max-width: 50vw;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+.slider img{
+    scroll-snap-align: start;
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    
+}
+.slider-nav{
+    display: flex;
+    column-gap: 1vw;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+.slider-nav a{
+    width:10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: background-color ease 500ms;
+}
+.slider-nav a:hover{
+    background-color: gray;
+}
+/* introduction  */
+
+.intro img{
+    width: 87%;
+    max-width: 850px;
+    object-fit: cover;
+    vertical-align: middle;
+    height: 600px;
+    display: block;
+}
+.intro{
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap:3rem;
+    height:800;
+    width:800;
+}
+.introduction{
+    flex: 1;
+    padding: 30px;
+    margin: 30px;
+}
+#h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 60px;
+    font-style: oblique;
+    padding: 15px 0px 0px 15px;
+}
+
+#p1{
+    text-align: center;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 23px;
+    line-height: 45px;
+}
+/* history */
+.history img{
+    width: 100%;
+    max-width: 800px;
+    object-fit: cover;
+    vertical-align: middle;
+    height: 600px;
+    display: block;
+}
+.history{
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap:6rem;
+    height:800;
+    width:800;
+}
+.right{
+    flex: 1;
+    padding: 30px;
+    margin: 30px;
+}
+#h2{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-style: oblique;
+    font-size: 50px;
+}
+#one{
+     text-align: left;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 23px;
+    line-height: 30px;
+}
+/* culture   */
+.culture img{
+    width: 100%;
+    max-width: 800px;
+    object-fit: cover;
+    vertical-align: middle;
+    height: 500px;
+    display: block;
+}
+.culture{
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap:6rem;
+    height:800;
+    width:800;
+    
+}
+.image{
+    flex: 1;
+    padding: 30px;
+    margin: 30px;
+}
+#h21{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-style: oblique;
+    font-size: 50px;
+}
+#one1{
+    text-align: left;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+    line-height: 40px;
+    justify-content: space-around;
+}
+/* attractions */
+#attractions{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    color: white;
+    background-color: transparent;
+    margin: 10px 0;
+    padding: 5px 0;
+    line-height: 1.2;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+     padding: 10px;
+    background-color: transparent;
+}
+.card-content h2{
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: black;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+.card-content p{
+    color: black;
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.card{
+    width: 400px;
+    background-color: #f0f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,-2);
+    margin: 15px;
+}
+.card img{
+    width:100%;
+    height:auto;
+}
+/* best time*/
+#best{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    color: white;
+    background-color: transparent;
+    margin: 10px 0;
+    padding: 5px 0;
+    line-height: 1.2;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+     padding: 10px;
+    background-color: transparent;
+}
+.info h2{
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: black;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+.info li{
+    color: black;
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* cuisines  */
+.cuisines-card{
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.cuisines-card img{
+    height:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    box-shadow: 3px 6px 10px black;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 400px;
+    transition: transform 0.3 ease;
+}
+.cuisines-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:20px;
+    padding :10px;
+}
+.cuisines-info{
+    height: 200px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    background: rgb(27,27,27,.5);
+    color: white;
+    transition:  all 0.3s;
+    text-align: center;
+
+}
+#h1{
+    margin: 10px;
+    font-size: 40px;
+    text-align: center;
+
+}
+#p{
+    font-size: 30px;
+    margin: 20px;
+    visibility: hidden;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    color: white;
+}
+.cuisines-card:hover{
+    cursor: pointer;
+}
+.cuisines-card:hover .info{
+    height: 250px;
+    bottom:90px;
+    background:  rgb(7, 4, 4); 
+    text-align: center;
+}
+.cuisines-card:hover p{
+    opacity: 1;
+    visibility: visible;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+.cuisines-card:hover img{
+    transform: scale(1.1) ;
+} 
+/* languages */
+h3{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 60px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    color: white;
+    
+    margin: 10px 0;
+    padding: 5px 0;
+    line-height: 1.2;
+}
+.lang-content p{
+     color: #fff;
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 600;
+    text-align: left;
+    background-color: #161414;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+}
+/* fun facts  */
+.fun-facts img{
+    width: 100%;
+    max-width: 800px;
+    object-fit: cover;
+    vertical-align: middle;
+    height: 600px;
+    display: block;
+}
+.fun-facts{
+    padding: 0 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap:4rem;
+    height:800;
+    width:800;
+}
+.rightfun {
+    flex: 1;
+    padding: 25px;
+    margin: 25px;
+}
+#hf{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-size: 70px;
+    color:#fff;
+    font-style: italic;
+}
+#ff{
+     text-align: left;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    line-height: 40px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+/* tour of kolkata */
+
+.tour{
+    padding:5rem 1rem;
+    max-width: var(--max-width);
+    margin: auto;
+}
+.package{
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.tour{
+    background-image:url(kolkata_photo.jpg);
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    
+}
+.tourlko{
+    background-image:url(lucknow_photo.jpg);
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+}
+.tourja{
+    background-image:url(jaipur_photo.jpg);
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+}
+ .tourdar{
+    background-image: url(darjeeling_photo.jpg);
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+}
+.touram{
+    background-image:url(amritsar_photo.jpg);
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+}
+.tourdel{
+    background-image:url(delhi_photo.jpg);
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+}
+#perfect-tour{
+    font-size: 600;
+    margin: 0;
+    color: white;
+    font-weight: bolder;
+
+}
+#plan-tour{
+     font-size: 1.1em;
+      margin-top: 10px;
+      color: white;
+      font-weight: 900;
+      font-size: 500;
+}
+.tour-card{
+    width: 900px;
+    background-color: #f0f0f0f0;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0,0,0,-2);
+    margin: 40px;
+    margin-left: 350px;
+
+}
+.tour-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+     padding: 15px;
+    background-color: transparent;
+}
+ #tour-details {
+      background-color: #161414;
+      max-width: 850px;
+      margin: 35px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px  #161414;
     }
-    #front{
-        height:100vh;
+
+    #tour-details h2 {
+      color: #00897b;
+      text-align: center;
+      margin-bottom: 20px;
     }
-    #extra{
-        font-size: 28px;
+
+    #tour-details p {
+      font-size: 0.9em;
+      margin: 10px 0;
+      line-height: 1.1;
     }
-    .main{
-        margin-top:50px auto 20px auto;
-        max-width:90%;
-        padding:20px;
+
+    #book-now {
+      text-align: center;
+      margin-bottom: 35px;
     }
-    .main p, .main #intro{
-        font-size:16px;
-        line-height:25px;
+
+    button {
+      background-color: #00897b;
+      color:  #161414;
+      border: none;
+      padding: 14px 40px;
+      border-radius: 25px;
+      font-size: 1.9rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 8px  #161414;
     }
-    #navbar{
-        height:auto;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding:10px 10px;
-    }
-    .navlinks{
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap:0;
-        margin-top: 10px;
-    }
-    .navlinks a{
-        padding:5px 0;
+
+    button:hover {
+      background-color: #00695c;
+      transform: scale(1.05);
     }
     
-    #yellow{
-        font-size:24px;
-        margin-bottom: 10px;
-    }
-}
-@media (max-width:480px){
-    #header{
-        font-size:20px;
-        padding-top:15px;
-    }
-    #extra{
-        font-size:22px;
-    }
-    #front{
-        height:100vh;
-    }
-    .main{
-        margin: 140px auto 20px auto;
-        padding:15px;
-    }
-}
 
 
-/*login page*/
-#login{
-    height:100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('login-page-img.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.loginbox{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    padding: 30px;
-    border: 2px solid white;
-    border-radius: 8px;
-    background-color: transparent;
-    backdrop-filter: blur(30px);
-    box-shadow: 0 0 4px black;
-}
-.loginbox input{
-    margin: 4px 0;
-    height:30px;
-    padding:10px;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid;
-    border-radius: 40px;
-}
-.loginbox input::placeholder{
-    color: white;
-}
-.loginbox h1{
-    text-align: center;
-    font-size: 30px;
-    font-family: Verdana;
-    color: rgba(128, 33, 33, 0.801);
-    line-height: 80px;
-}
-#user+label,#admin+label{
-        color:rgba(255, 255, 255, 0.904);
-        font-size:20px;
-        display: inline-flex;
-        align-items: center;
-        margin-right: 20px;
-}
-#submitbtn{
-    background-color: white;
-    color:black;
-    width: 100%;
-    height:45px;
-    margin-left: -55px;
-    margin-top: 10px;
-    outline:none;
-    border-radius: 40px;
-    cursor: pointer;
-    font-weight: 600;
-}
 
 
-/*explore*/
-#explore{
-    height:100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('cities-image.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.explorebox{
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    width:90%;
-    height: auto;
-    padding: 40px;
-    border: 1px solid white;
-    border-radius: 20px;
-    background-color: transparent;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 0 3px brown;
-}
-.citybtn{
-    background-color: #ffe6a7;
-    color:#150201;
-    width: 90%;
-    height:40px;
-    outline:none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 600;
-    margin-bottom: 5px;
-    margin-top: 25px;
-    margin-left: 22px;
-}
-#intro{
-    color: #150201;
-    line-height: 40px;
-    font-family: Verdana;
-    text-align: center;
-    font-size: 23px;
-}
-
-
-/*tour package*/
-#pack{
-    height:100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('pack-img.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.packagebox{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    height: 550px;
-    padding: 30px;
-    border: 1px solid white;
-    border-radius: 20px;
-    background-color: transparent;
-    backdrop-filter: blur(25px);
-    box-shadow: 0 0 3px skyblue;
-}
-.para{
-    text-align: justify;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 20px;
-}
-.packagebox input{
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-.cityselect{
-    position: relative;
-    padding:10px 10px 10px 10px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid transparent;
-    border-radius: 15px;
-    font-size: 15px;
-    text-align: justify;
-    color:#333;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor:pointer;
-    user-select: none;
-    box-shadow: 0 0px 5px white;
-}
-#applybtn{
-    background-color: white;
-    color:black;
-    width: 100%;
-    height:45px;
-    outline:none;
-    border-radius: 40px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-/*lko*/
-
-/*lkointro*/
-#lko{
-    background-image: url(lko-intro-img.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-#lkoname{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 90%;
-    max-width: 800px;
-    height:auto;
-    padding-top: 0;
-    padding-left: 0;
-    margin: auto;
-    text-align: center;
-    align-self: center;
-    font-size: 9vw;
-    color:beige;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#lkointro{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 90%;
-    max-width: 500px;
-    padding: 2rem;
-    padding-bottom: 2rem;
-    margin-top: 1rem;
-    margin-left: 0;
-    border: 2px solid white;
-    color:white;
-    border-radius: 10px;
-    box-shadow: 0 0 6px white;
-    background-color: transparent;
-    backdrop-filter: blur(15px);
-    text-align: center;
-    line-height: 1.5;
-    font-size:1rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#taglinelko{
-    font-size: 1.5rem;
-    font-weight: 500;
-    color:whitesmoke;
-}
-
-/*lkohistory*/
-#lkohistory{
-    background-color: black;
-    height: auto;
-    width:100%;
-    max-width: 1400px;
-    margin: 1rem auto;
-    padding:1rem;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#hist-sect-content-lko{
-    display:flex;
-    flex-direction: column;
-    width:100%;
-    padding: 1rem;
-    align-items: flex-start;
-}
-#histhead{
-    display: block;
-    width: 100%;
-    padding:1rem;
-    margin:0;
-    margin-bottom:1.5rem;
-    text-align: center;
-    font-size: 1.5rem;
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#histlist{
-    display: block;
-    width: 100%;
-    padding: 1.5rem;
-    padding-left: 0;
-    margin:0;
-    margin-top: 1%;
-    color:white;
-    text-align: justify;
-    line-height: 1.9rem;
-    font-size:1.2rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#lkohist-img{
-    width:100%;
-    height:auto;
-    object-fit: cover;
-    float: none;
-    margin-bottom: 1.5rem;
-}
-
-/*lkoculture*/
-#culturelko{
-    background-color: black;
-    width:100%;
-    max-width:1400px;
-    height:auto;
-    background-size: cover;
-    background-position: center;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem auto;
-    padding: 1rem;
-}
-#cult-section-content{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 1rem;
-    align-items: flex-start;
-}
-#culturehead{
-    display: block;
-    flex-direction: column;
-    width: 100%;
-    margin:0;
-    float: left;
-    padding:1rem;
-    margin-top: 5px;
-    margin-left: auto;
-    text-align: left;
-    font-size: 1.5rem;
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#culturelist{
-    display: block;
-    width:100%;
-    padding: 1.5rem;
-    padding-left: 0;
-    margin: 0;
-    margin-top: 1rem;
-    color:white;
-    text-align: justify;
-    line-height: 1.9rem;
-    font-size:1.2rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#cultureimglko{
-    width:100%;
-    height: auto;
-    object-fit: cover;
-    float: none;
-    margin-top:1.5rem;
-}
-@media screen and (min-width:768px) {
-    #hist-sect-content-lko{
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    #lkohist-img{
-        width:40%;
-        margin-right: 3rem;
-        margin-bottom: 0;
-    }
-    #hist-text-column{
-        width:60%;
-    }
-    #histhead{
-        text-align:right;
-        font-size:2.5rem;
-    }
-    #histlist{
-        padding-right: 0;
-    }
-    #cult-section-content{
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    #culture-text-column{
-        width:60%;
-        margin-right: 3rem;
-    }
-    #culturehead{
-        text-align:left;
-        font-size: 2.5rem;
-    }
-    #cultureimglko{
-        width:40%;
-        margin-left:0;
-        margin-top:0;
-    }
-}
-
-/*lkospots*/
-.spot{
-    display:flex;
-    flex-wrap:wrap;
-    background-color: rgba(135, 207, 235, 0.644);
-    margin-top: 5px;
-    justify-content: center;
-    text-align:center;
-}
-.spot h2{
-    text-align: center;
-    font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif ;
-    margin-top: 10px;
-}
-.spot p{
-    text-align: center;
-    font-size: 20px;
-    line-height: 30px;
-}
-.spotcontainer{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-.spotcard{
-    width:400px;
-    background-color: black;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0,0.2);
-    margin:40px;
-}
-.spotcard img{
-    width:100%;
-    height: auto;
-}
-.spotcontent{
-    padding: 18px;
-}
-.spotcontent h3{
-    font-size: 28px;
-    margin-bottom: 8px;
-    color:white;
-    text-align: center;
-}
-.spotcontent p{
-    color:white;
-    font-size: 20px;
-    line-height: 1.3;
-}
-
-/*lkotime*/
-.time{
-    display:flex;
-    flex-wrap:wrap;
-    background-color: #D4D9E5;
-    margin-top: 8px;
-    justify-content: center;
-    text-align:center;
-}
-.time h2{
-    text-align: center;
-    font-size: 50px;
-    color:#2D2724;
-    font-family: Arial, Helvetica, sans-serif ;
-    margin-top: 10px;
-}
-.time-container{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-.time-card{
-    width:350px;
-    background-color: #2A324B;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0,0.2);
-    margin:30px;
-}
-.time-content{
-    padding: 20px;
-    text-align: center;
-}
-.time-content h3{
-    font-size: 25px;
-    margin-bottom: 10px;
-    color:#E1E5EE;
-    text-align: center;
-}
-.time-content ul{
-    color:white;
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/*lkofood*/
-.foodlko{
-    display:flex;
-    flex-wrap:wrap;
-    background-color: rgb(245, 245, 131);
-    margin-top: 5px;
-    justify-content: center;
-    text-align:center;
-}
-.foodlko h2{
-    text-align: center;
-    font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif ;
-    margin-top: 10px;
-}
-.foodlko p{
-    text-align: center;
-    font-size: 20px;
-    line-height: 30px;
-}
-.foodlkocontainer{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-.foodlkocard{
-    width:400px;
-    background-color: black;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0,0.2);
-    margin:40px;
-}
-.foodlkocard img{
-    width:100%;
-    height: auto;
-}
-.foodlkocontent{
-    padding: 18px;
-}
-
-.foodlkocontent p{
-    color:white;
-    font-size: 20px;
-    line-height: 1.3;
-}
-
-/*lkolang*/
-.lkolang{
-    background-color: #2A324B;
-    text-align: center;
-    height:auto;
-    margin-top: 10px;
-}
-.lkolang h2{
-    font-size: 50px;
-    color:wheat;
-}
-.lkolang ul{
-    color:white;
-    font-size: 30px;
-    line-height: 1.6;
-    align-items: center;
-}
-
-/*lkotrivia*/
-#lkotrivia{
-    background-color: black;
-    height: auto;
-    width:100%;
-    max-width: 1400px;
-    margin: 1rem auto;
-    padding:1rem;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#trivia-content-lko{
-    display:flex;
-    flex-direction: column;
-    width:100%;
-    padding: 1rem;
-    align-items: flex-start;
-}
-#triviahead{
-    display: block;
-    width: 100%;
-    padding:1rem;
-    margin:0;
-    margin-bottom:1rem;
-    text-align: center;
-    font-size: 1.5rem;
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#trivialist{
-    display: block;
-    width: 100%;
-    padding: 1.5rem;
-    padding-left: 0;
-    margin:0;
-    margin-top: 1%;
-    color:white;
-    text-align: justify;
-    line-height: 2.6rem;
-    font-size:1.1rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#lkotrivia-img{
-    width:100%;
-    height:auto;
-    object-fit: cover;
-    float: none;
-    margin-bottom: 1.5rem;
-}
-@media screen and (min-width:768px) {
-    #trivia-content-lko{
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    #lkotrivia-img{
-        width:40%;
-        margin-right: 3rem;
-        margin-bottom: 0;
-    }
-    #trivia-text-column{
-        width:60%;
-    }
-    #triviahead{
-        text-align:right;
-        font-size:2.5rem;
-    }
-    #trivialist{
-        padding-right: 0;
-    }
-}
-
-/*booking form page*/
-#bookingform{
-    height:100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('bookingform-img.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.bookingbox{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    padding: 30px;
-    border: 1px solid white;
-    border-radius: 8px;
-    background-color: transparent;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 0 6px black;
-}
-.bookingbox input{
-    margin: 4px 0;
-    height:30px;
-    padding:10px;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid;
-    border-radius: 40px;
-}
-.bookingbox input::placeholder{
-    color: white;
-}
-.bookingbox h1{
-    text-align: center;
-    font-size: 30px;
-    font-family: Verdana;
-    color: white;
-    margin: 0 0 10px;
-}
-#toursubmitbtn{
-    background-color: white;
-    color:black;
-    width: 100%;
-    height:35px;
-    text-align: center;
-    outline:none;
-    border-radius: 40px;
-    cursor: pointer;
-    font-weight: 600;
-}
