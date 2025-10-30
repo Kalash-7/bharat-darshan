@@ -8,10 +8,43 @@
 </head>
 <body ID="bookingform">
     <div class="bookingbox">
-    <form action="/action.php"></form>
     <h1>Enter Credentials</h1>
-    <input  type="text" placeholder="enter your username"><br>
-    <input  type="password" placeholder="enter your password"><br>
+    <form id="bookingcredentials">
+    <input  id="usernameinfo" type="text" placeholder="enter your username" ><br>
+    <input  id="passwordinfo" type="password" placeholder="enter your password"><br>
     <button id="toursubmitbtn">Submit</button>
+    </form>
+    </div>
+    <script>
+         document.addEventListener(
+            'DOMContentLoaded',() =>
+            {
+            const form = document.getElementById('bookingcredentials');
+            const usernameInput= document.getElementById('usernameinfo');
+            const passwordInput= document.getElementById('passwordinfo');
+            const submitbtn= document.getElementById('toursubmitbtn');
+            const valid_username='user123';
+            const valid_password='pass1234';
+            form.addEventListener('submit',formsubmission);
+            function formsubmission(event){
+                event.preventDefault();
+                const enteredusername=usernameInput.value.trim();
+                const enteredpassword=passwordInput.value.trim();
+                if(enteredusername===''|| enteredpassword===''){
+                    alert('Please enter both username and password');
+                    return;
+                }
+                if(enteredusername===valid_username && enteredpassword===valid_password){
+                    alert("Booking Successful! We will contact you sonn.");
+                }
+                else{
+                    alert('Invalid username or password.');
+                    passwordInput.value='';
+                }
+            }
+            }    
+         );
+            
+    </script>
 </body>
 </html>
