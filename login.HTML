@@ -21,59 +21,8 @@
     </pre>
     </form>
     </div>
-    <script>
-         document.addEventListener(
-            'DOMContentLoaded',() =>
-            {
-            const form = document.getElementById('logincredentials');
-            const emailInput= document.getElementById('email');
-            const phonenumberInput= document.getElementById('number');
-            const usernameInput= document.getElementById('username');
-            const passwordInput= document.getElementById('password');
-            const roleInput=document.querySelectorAll('input[name="role"]');
-            const submitbtn= document.getElementById('submitbtn');
+    <script src="script.js">
 
-            form.addEventListener('submit',formsubmission);
-            function formsubmission(event){
-                event.preventDefault();
-                const enteredemail=usernameInput.value.trim();
-                const enteredphonenumber=passwordInput.value.trim();
-                const enteredusername=usernameInput.value.trim();
-                const enteredpassword=passwordInput.value.trim();
-                let selectedrole='';
-                roleInput.forEach(radio => {
-                    if(radio.checked){
-                        selectedrole=radio.value;
-                    }
-                });
-
-                if(!enteredemail|| !enteredphonenumber || !enteredusername|| !enteredpassword){
-                    alert('Please enter all the credentials');
-                    return;
-                }
-                if(!selectedrole){
-                    alert('Please select the mode (User or Admin)');
-                    return;
-                }
-                else{
-                    const successmessage=`
-                    Registration Successful!
-                    Role: ${selectedrole}
-                    Username: ${enteredusername}
-                    Phone no.: ${enteredphonenumber}
-                    Email: ${enteredemail}`;
-                    alert(successmessage);
-                }
-                if(selectedrole==='User'){
-                    window.location.href='packages.html';
-                }
-                if(selectedrole==='Admin'){
-                    window.location.href='index.html';
-                }
-                form.reset();
-            }    
-         });
-            
     </script>
 </body>
 </html>
