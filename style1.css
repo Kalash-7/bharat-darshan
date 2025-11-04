@@ -10,21 +10,6 @@ body{
     background-color: black;
 }
 
-/* navbar */
-#navbar{
-    height: 60px;
-    background-color:  rgb(7, 4, 4);
-}
-#logo{
-    color: yellow;
-    font-size: 30px;
-    margin-right: 200px;
-}
-#dot{
-    text-decoration: none;
-    color: white;
-    margin-right: 200px
-}
 /* main heading  */
 #mainheading{
     text-align: center;

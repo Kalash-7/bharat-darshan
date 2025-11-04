@@ -23,8 +23,6 @@
             const usernameInput= document.getElementById('usernameinfo');
             const passwordInput= document.getElementById('passwordinfo');
             const submitbtn= document.getElementById('toursubmitbtn');
-            const valid_username='user123';
-            const valid_password='pass1234';
             form.addEventListener('submit',formsubmission);
             function formsubmission(event){
                 event.preventDefault();
@@ -34,13 +32,12 @@
                     alert('Please enter both username and password');
                     return;
                 }
-                if(enteredusername===valid_username && enteredpassword===valid_password){
-                    alert("Booking Successful! We will contact you sonn.");
-                }
                 else{
-                    alert('Invalid username or password.');
-                    passwordInput.value='';
+                    alert("Booking Successful! We will contact you soon.");
+                    window.location.href='index.html';
+                    return;
                 }
+                
             }
             }    
          );

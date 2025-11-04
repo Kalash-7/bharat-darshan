@@ -783,9 +783,9 @@ a{
     box-shadow: 0 0 6px black;
 }
 .bookingbox input{
-    margin: 4px 0;
+    margin: 9px 0 4px;
     height:30px;
-    padding:10px;
+    padding:15px;
     background: transparent;
     border: none;
     outline: none;
@@ -806,6 +806,7 @@ a{
     background-color: white;
     color:black;
     width: 100%;
+    margin: 9px 0;
     height:35px;
     text-align: center;
     outline:none;
