@@ -72,7 +72,6 @@ body{
     width: 87%;
     max-width: 850px;
     object-fit: cover;
-    vertical-align: middle;
     height: 600px;
     display: block;
 }
@@ -113,7 +112,6 @@ body{
     width: 100%;
     max-width: 800px;
     object-fit: cover;
-    vertical-align: middle;
     height: 600px;
     display: block;
 }
@@ -152,7 +150,6 @@ body{
     width: 100%;
     max-width: 800px;
     object-fit: cover;
-    vertical-align: middle;
     height: 500px;
     display: block;
 }
@@ -256,7 +253,7 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 20px;
-     padding: 10px;
+    padding: 10px;
     background-color: transparent;
 }
 .info h2{
@@ -379,7 +376,6 @@ h3{
     width: 100%;
     max-width: 800px;
     object-fit: cover;
-    vertical-align: middle;
     height: 600px;
     display: block;
 }
