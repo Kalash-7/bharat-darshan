@@ -8,18 +8,69 @@
 </head>
 <body ID="login">
     <div class="loginbox">
-    <form action="/action.php"></form>
+    <form id="logincredentials">
     <h1>LOGIN</h1>
 
     <pre>
-        <input  type="radio" value="user" name="input" id="user"> <label class="radio" for="user">User</label>      <input  type="radio" value="admin" name="input"  id="admin"> <label class="radio" for="admin">Admin</label> <br>
-        <input  type="text" placeholder="email id"><br>
-        <input  type="number" placeholder="phone number"><br>
-        <input  type="text" placeholder="create your username"><br>
-        <input  type="password" placeholder="create your password"><br>
-        <button id="submitbtn" onclick="window.location.href='/packages.html'">Submit</button>
-    </form>
+        <input  type="radio" value="User" name="role" id="user"> <label class="radio" for="user">User</label>      <input  type="radio" value="Admin" name="role"  id="admin"> <label class="radio" for="admin">Admin</label> <br>
+        <input  type="text" placeholder="email id" id="email"><br>
+        <input  type="number" placeholder="phone number" id="number"><br>
+        <input  type="text" placeholder="create your username" id="username"><br>
+        <input  type="password" placeholder="create your password" id="password"><br>
+        <button id="submitbtn">Submit</button>
     </pre>
+    </form>
     </div>
+    <script>
+         document.addEventListener(
+            'DOMContentLoaded',() =>
+            {
+            const form = document.getElementById('logincredentials');
+            const emailInput= document.getElementById('email');
+            const phonenumberInput= document.getElementById('number');
+            const usernameInput= document.getElementById('username');
+            const passwordInput= document.getElementById('password');
+            const roleInput=document.querySelectorAll('input[name="role"]');
+            const submitbtn= document.getElementById('submitbtn');
+
+            form.addEventListener('submit',formsubmission);
+            function formsubmission(event){
+                event.preventDefault();
+                const enteredemail=usernameInput.value.trim();
+                const enteredphonenumber=passwordInput.value.trim();
+                const enteredusername=usernameInput.value.trim();
+                const enteredpassword=passwordInput.value.trim();
+                let selectedrole='';
+                roleInput.forEach(radio => {
+                    if(radio.checked){
+                        selectedrole=radio.value;
+                    }
+                });
+
+                if(!enteredemail|| !enteredphonenumber || !enteredusername|| !enteredpassword){
+                    alert('Please enter all the credentials');
+                    return;
+                }
+                if(!selectedrole){
+                    alert('Please select the mode (User or Admin)');
+                    return;
+                }
+                else{
+                    const successmessage=`
+                    Registration Successful!
+                    Role: ${selectedrole}
+                    Username: ${enteredusername}
+                    Phone no.: ${enteredphonenumber}
+                    Email: ${enteredemail}`;
+                    alert(successmessage);
+                }
+                if(selectedrole==='User'){
+                    window.location.href='index.html';
+                }
+                form.reset();
+            }    
+         });
+            
+    </script>
 </body>
 </html>
