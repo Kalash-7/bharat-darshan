@@ -8,6 +8,9 @@ document.addEventListener(
             if(bodyID==='login'){
                 loginformsubmission();  
             }
+            if(bodyID==='packageform'){
+                packageformsubmission();
+            }
         });
 
 /*booking form logic*/
@@ -87,8 +90,72 @@ function loginformsubmission(){
                 form.reset();
             });
         }
-}   
+} 
 
+/*package page logic*/
+function packageformsubmission(){
+    const form = document.getElementById('packagecredentials');
+    const PAGE_MAP={
+                    "lucknow":{
+                        "5d4n":"tourlucknow.html"
+                    },
+                    "delhi":{
+                        "5d4n":"tourdelhi.html"
+                    },
+                    "jaipur":{
+                        "5d4n":"tourjaipur.html"
+                    },
+                    "amritsar":{
+                        "5d4n":"touramritsar.html"
+                    },
+                    "kolkata":{
+                        "5d4n":"tourkolkata.html"
+                    },
+                    "darjeeling":{
+                        "5d4n":"tourdarjeeling.html"
+                    }
+                };
+                const applyButton = document.getElementById("applybtn");
+                if(form){
+                    form.addEventListener('submit',(event)=>{
+                        event.preventDefault();
+                    const selectedDurationElement= document.querySelector('input[name="duration"]:checked');
+                    const citySelect= document.querySelector('select[name="city"]');
+                    const personInput= document.querySelector('input[type="number"]');
+                    const durationcode= selectedDurationElement ?
+                    selectedDurationElement.value:null;
+                    const city= citySelect?
+                    citySelect.value: null;
+                    const personvalue= personInput?
+                    personInput.value.trim(): "";
+                    const person= parseInt(personvalue);
+                    if(!durationcode){
+                        alert("Please select a package duration.");
+                        return;
+                    }
+                    if(personvalue===""||isNaN(person)||person<1){
+                        alert("Please enter a valid number of travelers (atleast 1).");
+                        return;
+                    }
+                    const cityMap=PAGE_MAP[city];
+             
+                    const targetpage= cityMap?
+                    cityMap[durationcode] : null;
+                    if(!targetpage){
+                        alert("not available");
+                        return;
+                    }
+                    const params= new URLSearchParams();
+                    params.append('duration',durationcode);
+                    params.append('city',city);
+                    params.append('person',person);
+                    const finalURL = `${targetpage}?${params.toString()}`;
+                    console.log("redirecting to:", finalURL);
+                    window.location.href= finalURL;
+                    });
+                }
+}
+ 
 
     
     

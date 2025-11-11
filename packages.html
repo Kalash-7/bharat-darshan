@@ -6,7 +6,8 @@
     <title>Packages</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="pack">
+<body id="packageform">
+    <form id="packagecredentials">
     <div class="packagebox">
     <p class="para">Select your package duration</p><br>
     <label FOR="101">
@@ -33,70 +34,7 @@
     <p class="para">Enter the no. of persons</p>
     <input type="number" placeholder="No. of persons" ><br><br>
     <button id="applybtn">Apply</button>
-    </div>
-    <script>
-        document.addEventListener(
-            'DOMContentLoaded',() =>
-            {
-                const PAGE_MAP={
-                    "lucknow":{
-                        "5d4n":"tourlucknow.html"
-                    },
-                    "delhi":{
-                        "5d4n":"tourdelhi.html"
-                    },
-                    "jaipur":{
-                        "5d4n":"tourjaipur.html"
-                    },
-                    "amritsar":{
-                        "5d4n":"touramritsar.html"
-                    },
-                    "kolkata":{
-                        "5d4n":"tourkolkata.html"
-                    },
-                    "darjeeling":{
-                        "5d4n":"tourdarjeeling.html"
-                    }
-                };
-                const applyButton = document.getElementById("applybtn");
-                applyButton.addEventListener('click',function(event){
-                    event.preventDefault();
-                    const selectedDurationElement= document.querySelector('input[name="duration"]:checked');
-                    const citySelect= document.querySelector('select[name="city"]');
-                    const personInput= document.querySelector('input[type="number"]');
-                    const durationcode= selectedDurationElement ?
-                    selectedDurationElement.value:null;
-                    const city= citySelect?
-                    citySelect.value: null;
-                    const personvalue= personInput?
-                    personInput.value.trim(): "";
-                    const person= parseInt(personvalue);
-                    if(!durationcode){
-                        alert("Please select a package duration.");
-                        return;
-                    }
-                    if(personvalue===""||isNaN(person)||person<1){
-                        alert("Please enter a valid number of travelers (atleast 1).");
-                        return;
-                    }
-                    const cityMap=PAGE_MAP[city];
-             
-                    const targetpage= cityMap?
-                    cityMap[durationcode] : null;
-                    if(!targetpage){
-                        alert("not available");
-                        return;
-                    }
-                    const params= new URLSearchParams();
-                    params.append('duration',durationcode);
-                    params.append('city',city);
-                    params.append('person',person);
-                    const finalURL = `${targetpage}?${params.toString()}`;
-                    console.log("redirecting to:", finalURL);
-                    window.location.href= finalURL;
-                });
-            }
-        );
-    </script>
+    </div> </form>
+    <script src="script.js"> </script>
 </body>
 </html>
