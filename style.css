@@ -32,7 +32,22 @@ footer{
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: rgb(174, 165, 185);
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#feedbackbox{
+    border:2px double black;
+    border-radius: 20px;
+    height:50px;
+    padding:10px;
+    margin: 8px 0 5px 0;
+}
+#feedbtn{
+    border: 1px solid black;
+    border-radius: 15px;
+    width:70px;
+    height:25px;
 }
 a{
     text-decoration:none;
